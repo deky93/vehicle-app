@@ -1,0 +1,26 @@
+#map {flex-basis: 90%; height: 100vh; }
+
+
+
+
+.container {
+    width: 100vw;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 10%;
+    margin-top: 2%;
+}
+
+#content {
+    display: none;
+}
+
+

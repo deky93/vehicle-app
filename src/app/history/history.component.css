@@ -1,0 +1,33 @@
+.wrapper {
+    display: relative;
+    /* width: 50vw;
+    margin: 0; */
+}
+
+table{
+    width: 100%;
+    background-color: lightblue;
+    text-align: center;
+
+  }
+
+  th.mat-header-cell {
+    padding: 10px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+
+  .one {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* align-content: stretch; */
+    justify-content: flex-start;
+    align-items: center;
+    
+  }
+
+  .mat-primary {
+    margin: 5px;
+  }
+  

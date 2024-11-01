@@ -1,0 +1,37 @@
+<h1>Units</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Marka</th>
+            <th>Model</th>
+            <th></th>
+            <th></th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let unit of units">
+            <td>{{ unit.model }}</td>
+            <td>{{ unit.marka }}</td>
+            <td><button mat-raised-button color="warn" id="removeUnitBtn" (click)="removeUnit(unit.unitId)">Remove</button>
+            </td>
+            <td><span><button mat-raised-button color="primary" (click)="showEditUnitForm(unit.unitId, unit.marka, unit.model)" id="editUnitBtn">Edit unit</button></span></td>
+        </tr>
+    </tbody>
+</table>
+<button mat-raised-button class="primary" (click)="openUnitForm()">Add new unit</button>
+<div class="addNewUnit" *ngIf="showUnitForm">
+    <div>
+        <input [(ngModel)]="marka" type="text" class="text">
+        <input [(ngModel)]="model" type="text" class="text">
+        <button mat-raised-button color="primary" (click)="addUnit()">Add</button>
+        <button mat-raised-button  (click)="closeUnitForm()">Close</button>
+    </div>
+</div>
+<div class="editUnit" *ngIf="showEditForm">
+    <div>
+        <input [(ngModel)]="marka" type="text" class="text">
+        <input [(ngModel)]="model" type="text" class="text">
+        <button (click)="editUnit()">Edit</button>
+        <button (click)="closeEditUnitForm()">Close</button>
+    </div>
+</div>

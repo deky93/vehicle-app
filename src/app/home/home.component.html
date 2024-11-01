@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="sidebar">
+    <div class="navigation-sidebar-item">
+      <button mat-button routerLink="users" routerLinkActive="active" (click)="toogle()"><span>Users</span></button>
+    </div>
+    <div class="navigation-sidebar-item">
+      <button mat-button routerLink="units" routerLinkActive="active" (click)="toogle()"><span>Units</span></button>
+    </div>
+    <div class="navigation-sidebar-item">
+      <button mat-button routerLink="history" routerLinkActive="active" (click)="toogle()"><span>History</span></button>
+    </div>
+    <div class="navigation-sidebar-item">
+      <button mat-button routerLink="monitoring" routerLinkActive="active" (click)="toogle()"><span>Monitoring</span></button>
+    </div>
+    <div class="navigation-sidebar-item">
+      <button mat-button routerLink="userunits" routerLinkActive="active" (click)="toogle()"> <span> User Units</span></button>
+    </div>
+    <div class="navigation-sidebar-item">
+      <button mat-button (click)="onLogout()" type="button" class="logOutButton">Log Out</button>
+    </div>
+  </div>
+  <div id="content">
+    <router-outlet></router-outlet>
+  </div>
+  <div style="width: 90%;" id="map">
+  
+  </div>
+</div>
+
+  <!-- <button class="btn btn-primary" (click)="unitHistory()">Load</button> -->
+  <!-- <div class="card m-5" style="width:18rem" *ngIf="userDetails">
+    <ul class="list-group">
+      <li class="list-group-item"><strong>Username : </strong>{{userDetails.userName}}</li>
+      <li class="list-group-item"><strong>FullName : </strong>{{userDetails.fullName}}</li>
+      <li class="list-group-item"><strong>Email : </strong>{{userDetails.email}}</li>
+    </ul>
+  </div> -->
+  
+  
+  <!-- <p>Selected range: {{range.value | json}}</p> -->

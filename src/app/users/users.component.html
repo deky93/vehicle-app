@@ -1,0 +1,37 @@
+<h1>Users</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th></th>
+            <th></th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{ user.firstname }}</td>
+            <td>{{ user.lastname }}</td>
+            <td><button mat-raised-button class="buttonRemove" id="removeUserBtn" (click)="removeUser(user.id)">Remove</button>
+            </td>
+            <td><span><button mat-raised-button class="buttonEdit" (click)="showEditUserForm(user.id, user.firstname, user.lastname)" id="editUserBtn">Edit user</button></span></td>
+        </tr>
+    </tbody>
+</table>
+<button mat-raised-button color="primary" (click)="openUserForm()">Add new user</button>
+<div class="addNewUser" *ngIf="showUserForm">
+    <div>
+        <input [(ngModel)]="firstname" type="text" class="text">
+        <input [(ngModel)]="lastname" type="text" class="text">
+        <button (click)="addUser()">Add</button>
+        <button (click)="closeUserForm()">Close</button>
+    </div>
+</div>
+<div class="editUser" *ngIf="showEditForm">
+    <div>
+        <input [(ngModel)]="firstname" type="text" class="text">
+        <input [(ngModel)]="lastname" type="text" class="text">
+        <button (click)="editUser()">Edit</button>
+        <button (click)="closeEditForm()">Close</button>
+    </div>
+</div>
